@@ -16,8 +16,8 @@ public class StartAction {
     }
 
     @RequestMapping(value = "/validate", method = RequestMethod.GET)
-    public String validatePurchasing(@RequestParam Integer valueToAdd) throws Exception {
-        observableListener.createObserver(valueToAdd);
+    public String validatePurchasing(@RequestParam Integer valueToAdd,@RequestParam String name) throws Exception {
+        observableListener.createObserver(valueToAdd,name);
         return "add another value";
     }
 
